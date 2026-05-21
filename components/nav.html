@@ -11,53 +11,56 @@
     />
   </head>
   <body>
+
+    <!-- Top Navbar -->
     <nav class="navbar">
-      <button class="hamburger" id="menuBtn" aria-label="เปิดเมนู">☰</button>
+      <div class="navbar-left">
+        <button class="hamburger" id="menuBtn" aria-label="เปิดเมนู">☰</button>
+        <div class="navbar-logo">Drug<span>BASE</span></div>
+      </div>
       <p class="name">
         <i class="fa-solid fa-user fa-lg"></i>
         พงศพล คงจันทร์
       </p>
     </nav>
 
-    <div class="overlay" id="overlay"></div>
+    <!-- Layout -->
+    <div class="layout">
 
-    <div class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <div class="sidebar-logo">Drug<span>BASE</span></div>
-        <button class="sidebar-close" id="closeBtn" aria-label="ปิดเมนู">
-          ✕
-        </button>
-      </div>
+      <!-- Overlay (mobile only) -->
+      <div class="overlay" id="overlay"></div>
 
-      <div class="sidebar-menu">
-        <a class="menu-item" href="#">
-          <i class="fa-solid fa-user-plus"></i> User Registration
-        </a>
-        <a class="menu-item" href="#">
-          <i class="fa-solid fa-users"></i> User List
-        </a>
-        <a class="menu-item" href="#">
-          <i class="fa-solid fa-user-check"></i> User Approve
-        </a>
-        <a class="menu-item" href="#">
-          <i class="fa-solid fa-key"></i> Change Password
-        </a>
-        <a class="menu-item" href="#">
-          <i class="fa-solid fa-bell"></i> Notification
-        </a>
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-menu">
+          <a class="menu-item" href="#">
+            <i class="fa-solid fa-user-plus"></i> User Registration
+          </a>
+          <a class="menu-item" href="#">
+            <i class="fa-solid fa-users"></i> User List
+          </a>
+          <a class="menu-item" href="#">
+            <i class="fa-solid fa-user-check"></i> User Approve
+          </a>
+          <a class="menu-item" href="#">
+            <i class="fa-solid fa-key"></i> Change Password
+          </a>
+          <a class="menu-item" href="#">
+            <i class="fa-solid fa-bell"></i> Notification
+          </a>
 
-        <div class="menu-divider"></div>
-          <a class="menu-item active" href="../home/home.html">
+          <div class="menu-divider"></div>
+          <a class="menu-item active" href="#">
             <i class="fa-solid fa-list"></i> Drug List
           </a>
-          <a class="menu-item" href="../addrug/adddrug.html">
+          <a class="menu-item" href="#">
             <i class="fa-solid fa-circle-plus"></i> Drug Add
           </a>
           <a class="menu-item" href="#">
             <i class="fa-solid fa-store"></i> Pharmacy
           </a>
 
-        <div class="menu-divider"></div>
+          <div class="menu-divider"></div>
           <a class="menu-item" href="#">
             <i class="fa-solid fa-table-cells"></i> Generic Name List
           </a>
@@ -71,31 +74,32 @@
             <i class="fa-solid fa-table-cells"></i> Dosage Form List
           </a>
 
-        <div class="menu-divider"></div>
-        <a class="menu-item" href="#">
-          <i class="fa-solid fa-book"></i> คู่มือบันทึกข้อมูล DrugBASE
-        </a>
-        
-      </div>
+          <div class="menu-divider"></div>
+          <a class="menu-item" href="#">
+            <i class="fa-solid fa-book"></i> คู่มือบันทึกข้อมูล DrugBASE
+          </a>
+        </div>
 
-      <div class="sidebar-bottom-icons">
-        <button title="เพิ่ม"><i class="fa-solid fa-circle-plus"></i></button>
-        <button title="หน้าหลัก"><i class="fa-solid fa-house"></i></button>
-        <button title="รายการ"><i class="fa-solid fa-bars"></i></button>
-      </div>
+        <div class="sidebar-bottom-icons">
+          <button title="เพิ่ม"><i class="fa-solid fa-circle-plus"></i></button>
+          <button title="หน้าหลัก"><i class="fa-solid fa-house"></i></button>
+          <button title="รายการ"><i class="fa-solid fa-bars"></i></button>
+        </div>
 
-      <div class="sidebar-footer">
-        <div class="avatar">พง</div>
-        <div class="user-info">
-          <div class="uname">พงศพล คงจันทร์</div>
-          <div class="status"><span class="status-dot"></span> Online</div>
+        <div class="sidebar-footer">
+          <div class="avatar">พง</div>
+          <div class="user-info">
+            <div class="uname">พงศพล คงจันทร์</div>
+            <div class="status"><span class="status-dot"></span> Online</div>
+          </div>
         </div>
       </div>
+
+
     </div>
 
     <script>
       const menuBtn = document.getElementById("menuBtn");
-      const closeBtn = document.getElementById("closeBtn");
       const sidebar = document.getElementById("sidebar");
       const overlay = document.getElementById("overlay");
 
@@ -109,8 +113,10 @@
         overlay.classList.remove("open");
       }
 
-      menuBtn.addEventListener("click", openSidebar);
-      closeBtn.addEventListener("click", closeSidebar);
+      menuBtn.addEventListener("click", () => {
+        sidebar.classList.contains("open") ? closeSidebar() : openSidebar();
+      });
+
       overlay.addEventListener("click", closeSidebar);
     </script>
   </body>
