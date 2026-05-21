@@ -27,9 +27,8 @@ body {
 }
 
 /* ===== CONTAINER & CARD ===== */
-
 .container {
-  max-width: 1400px;
+  width: 100%;
   margin: 32px auto;
   padding: 0 16px;
 }
@@ -58,7 +57,7 @@ body {
 
 .form-label {
   display: block;
-  font-size: var(--font-sm);
+  font-size: 18px;
   font-weight: 500;
   color: var(--label);
   margin-bottom: 6px;
@@ -86,6 +85,11 @@ body {
   border-color: var(--primary);
   box-shadow: var(--focus-ring);
   background: #fff;
+}
+
+.input {
+  width: 80%;
+  height: 40px;
 }
 
 /* ===== BUTTONS ===== */

@@ -3,12 +3,18 @@ fetch("../../components/nav.html")
   .then(data => {
     document.getElementById("navbar").innerHTML = data;
 
+    // ย้าย .container เข้า #main-content
+    const mainContent = document.getElementById("main-content");
+    const containers = document.querySelectorAll("body > .container");
+    containers.forEach(container => {
+      mainContent.appendChild(container);
+    });
+
     document.getElementById("menuBtn").addEventListener("click", () => {
       document.getElementById("sidebar").classList.add("open");
       document.getElementById("overlay").classList.add("open");
     });
 
-    document.getElementById("closeBtn").addEventListener("click", closeSidebar);
     document.getElementById("overlay").addEventListener("click", closeSidebar);
 
     function closeSidebar() {

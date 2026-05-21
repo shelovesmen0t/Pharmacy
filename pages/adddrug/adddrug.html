@@ -12,64 +12,109 @@
   <div id="navbar"></div>
   <script src="../../components/nav.js"></script>
 
-  <div class="main-content">
-    <div class="container">
-      <!-- topic -->
-      <div class="topic">
-        <p><span style="font-weight:bold; font-size: 32px;">Drug Edit</span> แก้ไขข้อมูลยา</p>
-        <p>Home / Drug List / Drug Edit</p>
-      </div>
+  <div class="container">
+    <!-- topic -->
+    <div class="topic">
+      <p><span style="font-weight:bold; font-size: 32px;">Drug Add</span> เพิ่มข้อมูลยาเข้าสู่ระบบ</p>
+      <p>Home / Drug List / Drug Edit</p>
+    </div>
 
-      <div class="box">
-        <!-- 1 general -->
-        <p class="title">1. ข้อมูลทั่วไป</p>
-        <div class="general">
-          <div class="general-group">
-            <label>ประเภททะเบียนยา</label>
-            <select><option>-- กรุณากรอกข้อมูล --</option></select>
-          </div>
-          <div class="general-group">
-            <label>ประเภทเงื่อนไขยา</label>
-            <select><option>-- กรุณากรอกข้อมูล --</option></select>
-          </div>
-          <div class="general-group">
-            <label>ประเภทของยา</label>
-            <select><option>-- กรุณากรอกข้อมูล --</option></select>
-          </div>
-          <div class="general-group">
-            <label>ปีที่ได้รับอนุญาต</label>
-            <select><option>-- กรุณากรอกข้อมูล --</option></select>
-          </div>
+    <div class="box">
+      <p class="title">1. ข้อมูลทั่วไป</p>
+      <div class="general">
+        <div class="general-group">
+          <label>ประเภททะเบียนยา</label>
+          <select><option>-- กรุณากรอกข้อมูล --</option></select>
         </div>
-
-        <!-- 2 Registration -->
-        <p class="title">2. ข้อมูลทะเบียน</p>
-        <div class="information">
-          <div class="information-group">
-            <label>ประเภททะเบียนยา</label>
-            <select><option>-- กรุณากรอกข้อมูล --</option></select>
-          </div>
-          <div class="information-group">
-            <label>ประเภททะเบียนยา</label>
-            <select><option>-- กรุณากรอกข้อมูล --</option></select>
-          </div>
+        <div class="general-group">
+          <label>ประเภทเงื่อนไขยา</label>
+          <select><option>-- กรุณากรอกข้อมูล --</option></select>
         </div>
-
-        <!-- 3 Pharmacy -->
-        <p class="title">3. ชื่อยา</p>
-        <div class="general">
-          <div class="general-group">
-            <label>ประเภททะเบียนยา</label>
-            <select><option>-- กรุณากรอกข้อมูล --</option></select>
-          </div>
-          <div class="general-group">
-            <label>ประเภททะเบียนยา</label>
-            <select><option>-- กรุณากรอกข้อมูล --</option></select>
-          </div>
+        <div class="general-group">
+          <label>ประเภทของยา</label>
+          <select><option>-- กรุณากรอกข้อมูล --</option></select>
+        </div>
+        <div class="general-group">
+          <label>ปีที่ได้รับอนุญาต</label>
+          <select><option>-- กรุณากรอกข้อมูล --</option></select>
         </div>
       </div>
+
+      <p class="title">2. ข้อมูลทะเบียน</p>
+      <div class="information">
+        <div class="information-group">
+          <label>ประเภททะเบียนยา</label>
+          <select><option>-- กรุณากรอกข้อมูล --</option></select>
+        </div>
+        <div class="information-group">
+          <label>ประเภททะเบียนยา</label>
+          <select><option>-- กรุณากรอกข้อมูล --</option></select>
+        </div>
+      </div>
+
+      <p class="title">3. ชื่อยา</p>
+      <div class="general">
+        <div class="general-group">
+          <label>ประเภททะเบียนยา</label>
+          <select><option>-- กรุณากรอกข้อมูล --</option></select>
+        </div>
+        <div class="general-group">
+          <label>ประเภททะเบียนยา</label>
+          <select><option>-- กรุณากรอกข้อมูล --</option></select>
+        </div>
+         <!-- buttons -->
+        <div class="action-buttons">
+
+          <button class="add-btn">
+            <i class="bi bi-plus-lg"></i>
+            เพิ่มรายการ
+          </button>
+
+          <button class="refresh-btn">
+            <i class="bi bi-arrow-clockwise"></i>
+            รีเฟรช
+          </button>
+        </div>
+      </div>
+
+      <div class="data-container">
+        <p class="data-title">รายการข้อมูลยาที่เพิ่ม</p>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>ลำดับ</th>
+                <th>Registration Code</th>
+                <th>ชื่อยา (ไทย)</th>
+                <th>ชื่อยา (อังกฤษ)</th>
+                <th>ประเภทยา</th>
+                <th>ปีที่ได้รับอนุญาต</th>
+                <th>จัดการ</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td colspan="7" class="empty-state">
+                  <div class="empty-box">
+                    <i class="bi bi-archive-fill"></i>
+                    <p class="empty-title">ยังไม่มีข้อมูล</p>
+                    <p class="empty-subtitle">
+                      ข้อมูลยาที่เพิ่มจะแสดงที่นี่
+                    </p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+
+
 
     </div>
+
   </div>
 
 </body>
