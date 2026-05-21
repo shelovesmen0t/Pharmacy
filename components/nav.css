@@ -119,12 +119,6 @@ body {
   color: #ffffff;
 }
 
-.menu-item.active {
-  background: rgba(61, 140, 216, 0.4);
-  color: #ffffff;
-  border-left: 3px solid #7ec8f4;
-}
-
 .menu-item i {
   font-size: 18px;
   width: 22px;
