@@ -13,23 +13,23 @@ body {
     padding-top: 30px;
 }
 
-.topic {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-}
-
 .box {
     height: auto;
     margin-top: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     background-color: #ffff;
     border-radius: 15px;
+}
 
+.topic {
+  margin-left: 20px ;
+  font-size: 24px; 
+  padding: 20px;
+  display: flex;
+  gap: 30px;
 }
 
 /* ===== LINE ===== */
-
 .line {
     height: 120%;
     height: 3px;
@@ -45,10 +45,10 @@ body {
     background-color: #ffff;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 25px;
+    gap: 30px;
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 .menu a {
@@ -56,25 +56,22 @@ body {
     padding: 12px 10px;
     text-align: center;
     background: #ffff;
-    border: 1px solid #555;
     border-radius: 10px;
     cursor: pointer;
     width: 200px;
-
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .menu .active{
-    background-color: #70C0F3;
-    color: black;
+    background-color: #0F46AF;
+    color: white;
     font-weight: 500;
-    border: 1px solid #2196F3;
 }
 
 .menu :hover {
-    background-color: #70C0F3;
-    color: black;
+    background-color: #0F46AF;
+    color: white;
     font-weight: 500;
-    border: 1px solid #2196F3;
 }
 
 /* ===== detail ===== */
@@ -138,3 +135,27 @@ body {
   font-size: 14px;
 }
 
+.button {
+  height: 30px;
+  display: flex;
+  cursor: pointer;
+  gap: 20px;
+} 
+
+.upload {
+  background-color: #3271D7;
+  border-color: #5B8EDF;
+  width: 70px;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  }
+
+.delete {
+  width: 70px;
+  border: 2px solid #ff3b30;
+  border-radius: 5px;
+  background: rgba(255, 59, 48, 0.15);
+  color: #ff3b30;
+  font-weight: bold;
+}
