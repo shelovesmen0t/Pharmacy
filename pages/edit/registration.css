@@ -159,3 +159,26 @@ body {
   color: #ff3b30;
   font-weight: bold;
 }
+
+.img {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-placeholde {
+  width: 250px;
+  height: 180px;
+  background-color: #eee;
+  border: 2px solid #333;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
