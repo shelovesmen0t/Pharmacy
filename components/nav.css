@@ -81,10 +81,10 @@ body {
 
 /* ── Sidebar: fixed ── */
 .sidebar {
-  position: fixed;
+  position: sticky;
   top: 70px;
   left: 0;
-  width: 260px;
+  width: 280px;
   height: calc(100vh - 70px);
   background: #1a3a6b;
   display: flex;
@@ -239,10 +239,8 @@ body {
 
 /* ── Main content area ── */
 .main-content {
-  margin-left: 260px;           /* ← ชดเชย sidebar */
   min-height: calc(100vh - 70px);
   width: calc(100% - 260px);   /* ← สำคัญมาก */
-  padding: 16px;
   background: #eaf1fb;
 }
 
