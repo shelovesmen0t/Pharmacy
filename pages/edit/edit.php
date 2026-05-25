@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration</title>
-    <link rel="stylesheet" href="registration.css" />
+    <link rel="stylesheet" href="edit.css" />
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
   </head>
@@ -14,32 +14,35 @@
 
   <div class ="container">
     <div>
-      <p><span style="font-weight:bold; font-size: 32px;">Drug Edit</span> แก้ไขข้อมูลยา</p>
+      <p><span style="font-weight:bold; font-size: 32px; padding-right: 20px;">Drug Edit</span>แก้ไขข้อมูลยา</p>
     </div>
 
     <div class="box"> 
       <div class="topic">
-        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="35px" fill="#4671DE">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#4671DE">
           <path d="M560-80v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T903-300L683-80H560Zm300-263-37-37 37 37ZM620-140h38l121-122-18-19-19-18-122 121v38ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v120h-80v-80H520v-200H240v640h240v80H240Zm280-400Zm241 199-19-18 37 37-18-19Z"/>
         </svg>
         <p>แก้ไขข้อมูล</p>
       </div>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+      <div class="content">
+        <div class="content-left">
+          <p>version : 1</p>
+          <p>DrugNet ID : 123</p>
+          <p>Company ID : 456</p>
+          <p>Company Name : บริษัท เอบี</p>
+          <p>Registration ID : 234</p>
+        </div>
+        <div class="content-mid">
+          <p>Registration Code : 1C 19/61(NB)</p>
+          <p>Trade Name(TH) : ไฮบอร์</p>
+          <p>Trade Name(EN) : Hibor</p>
+          <p></p>
+          <p></p>
+        </div>
+        <div class="pic-right">
+
+        </div>
+      </div>
     </div>
 
     <div class="line"></div>
@@ -55,6 +58,14 @@
       <a>DDI</a>
       <a>Compatibility</a>
       <a>Company Note</a>
+    </div>
+
+    <div class="registration">
+      
+    </div>
+
+    <div class="api">
+      
     </div>
 
     <!-- ---------------------------------------------- -->
@@ -152,6 +163,28 @@
       </div>
 
     </div>
+
+    
+
+    <script>
+
+        function showMenu(menuId) {
+
+            // ซ่อนทั้งหมด
+            let contents = document.querySelectorAll('.content');
+
+            contents.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            // แสดงอันที่กด
+            document.getElementById(menuId).style.display = 'block';
+        }
+
+        // เปิดหน้าแรกอัตโนมัติ
+        showMenu('home');
+
+    </script>
 
   </body>
 </html>

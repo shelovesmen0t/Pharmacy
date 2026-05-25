@@ -29,6 +29,12 @@ body {
   gap: 30px;
 }
 
+.topic svg {
+  background-color: #cee7f7;
+  border-radius: 50%;
+  padding: 6px;
+}
+
 /* ===== LINE ===== */
 .line {
     height: 120%;
