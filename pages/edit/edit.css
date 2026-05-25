@@ -1,0 +1,83 @@
+body {
+    background: #E6F4FD;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.container {
+    width: 85%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.box {
+    height: auto;
+    margin-top: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: #ffff;
+    border-radius: 15px;
+}
+
+.topic {
+  margin-left: 20px ;
+  font-size: 24px; 
+  padding: 20px;
+  display: flex;
+  gap: 30px;
+}
+
+.topic svg {
+  background-color: #cee7f7;
+  border-radius: 50%;
+  padding: 6px;
+}
+
+/* ===== LINE ===== */
+.line {
+    height: 120%;
+    height: 3px;
+    background-color: #4BA6EF;
+    margin-top: 40px;
+}
+
+/* ===== menu ===== */
+.menu {
+    justify-items: center;
+    margin-top: 40px;
+    height: auto;
+    background-color: #ffff;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.menu a {
+    margin: 0;
+    padding: 12px 10px;
+    text-align: center;
+    background: #ffff;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 200px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu .active{
+    background-color: #0F46AF;
+    color: white;
+    font-weight: 500;
+}
+
+.menu :hover {
+    background-color: #0F46AF;
+    color: white;
+    font-weight: 500;
+}
+
