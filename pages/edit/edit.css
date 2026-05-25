@@ -55,6 +55,7 @@ body {
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
+    margin-bottom: 40px;
 }
 
 .menu a {
@@ -80,111 +81,3 @@ body {
     font-weight: 500;
 }
 
-/* ===== detail ===== */
-.detail {
-  height: auto;
-  background-color: #fff;
-  margin-bottom: 20px;
-  margin-top: 40px;
-  border-radius: 15px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-  padding: 30px;
-}
-
-.detail p {
-  padding: 30px;
-}
-
-.detail-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.form-group label {
-  font-size: 13px;
-  color: #555;
-}
-
-.form-group .dropdown,
-.form-group .input-box {
-  height: 36px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 0 10px;
-  font-size: 13px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.form-group .input-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.form-group .input-box input[type="date"] {
-  border: none;
-  outline: none;
-  font-size: 13px;
-  flex: 1;
-}
-
-.form-group .input-box i {
-  color: #888;
-  font-size: 14px;
-}
-
-.button {
-  height: 30px;
-  display: flex;
-  cursor: pointer;
-  gap: 20px;
-} 
-
-.upload {
-  background-color: #3271D7;
-  border-color: #5B8EDF;
-  width: 70px;
-  font-weight: bold;
-  color: white;
-  border-radius: 5px;
-  }
-
-.delete {
-  width: 70px;
-  border: 2px solid #ff3b30;
-  border-radius: 5px;
-  background: rgba(255, 59, 48, 0.15);
-  color: #ff3b30;
-  font-weight: bold;
-}
-
-.img {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  justify-items: center;
-  margin-top: 20px;
-}
-
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.img-placeholde {
-  width: 250px;
-  height: 180px;
-  background-color: #eee;
-  border: 2px solid #333;
-  border-radius: 6px;
-  margin-bottom: 30px;
-}

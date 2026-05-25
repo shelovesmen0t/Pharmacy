@@ -6,6 +6,98 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Registration</h1>
+<div class="detail">
+
+  <p>ข้อมูลทั่วไป</p>
+  <div class="detail-row">
+    
+    <!-- Dosage Form -->
+    <div class="form-group">
+      <label>Dosage Form :</label>
+      <select class="dropdown">
+        <option value="">-- Select Dosage Form --</option>
+        <option>AEROSAL</option>
+        <option>AEROSAL, FOAM</option>
+        <option>AEROSAL, METERED</option>
+        <option>AEROSAL, POWDER</option>
+        <option>AEROSAL, SPRAY</option>
+        <option>BAR, CHEWABLE</option>
+        <option>BEAD</option>
+        <option>BEAD, IMPLANT, EXTENDED RELEASE</option>
+        <option>BLOCK</option>
+        <option>CAPSULE</option>
+        <option>CAPSULE, COATED</option>
+        <option>CAPSULE, COATED PELLETS</option>
+        <option>CAPSULE, COATED, EXTENDED RELEASE</option>
+        <option>CAPSULE, GALATIN COATED</option>
+        <option>CAPSULE, LIQUID FILLED</option>
+        <option>CEMENT</option>
+        <option>CIGARETTE</option>
+        <option>CLOTH</option>
+        <option>CONCENTRATE</option>
+        <option>CONE</option>
+        <option>CONE, EXTENDED RELEASE</option>
+        <option>CREAM</option>
+        <option>CREAM, AUGMENTED</option>
+        <option>CRYSTAL</option>
+        <option>CULTURE</option>
+        <option>DIAPHRAGM</option>
+      </select>
+    </div>
+
+    <!-- Effective Date -->
+    <div class="form-group">
+      <label>Effective Date :</label>
+      <div class="input-box">
+        <input type="date" value="2023-02-23">
+      </div>
+    </div>
+
+    <!-- End Date -->
+    <div class="form-group">
+      <label>End Date :</label>
+      <div class="input-box">
+        <input type="date" value="2030-02-23">
+      </div>
+    </div>
+
+    <!-- Storage -->
+    <div class="form-group">
+      <label>Storage Condition :</label>
+      <select class="dropdown">
+        <option value="">-- Select Dosage Form --</option>
+        <option>Freezed : minus 20 degrees C to minus 40 degrees c</option>
+        <option>Room : below 30 degrees C</option>
+        <option>Refrigerated : 2 degrees C to 8 degrees C</option>
+      </select>
+    </div>
+  </div>
+
+  <p>รูปภาพยา ใส่ได้สูงสุด 3 รูป</p>
+  <div class="button">
+    <button class="upload">Upload</button>
+    <button class="delete">delete</button>
+  </div>
+
+   <div class="img">
+
+    <div class="card">
+      <div class="img-placeholde"></div>
+      <button class="delete">Delete</button>
+    </div>
+
+    <div class="card">
+      <div class="img-placeholde"></div>
+      <button class="delete">Delete</button>
+    </div>
+
+    <div class="card">
+      <div class="img-placeholde"></div>
+      <button class="delete">Delete</button>
+    </div>
+
+  </div>
+
+</div>
 </body>
 </html>

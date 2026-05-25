@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="edit.css" />
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" />
+
+  <!-- สำหรับ component ต่างๆ -->
+  <link rel="stylesheet" href="../../components/registration/registration.css" />
+  <link rel="stylesheet" href="../../components/api/api.css" />
+  <link rel="stylesheet" href="../../components/admin-route/admin-route.css" />
+  <link rel="stylesheet" href="../../components/instructions-en/instructions-en.css" />
+  <link rel="stylesheet" href="../../components/instructions-th/instructions-th.css" />
+  <link rel="stylesheet" href="../../components/reference/reference.css" />
+  <link rel="stylesheet" href="../../components/logistics/logistics.css" />
+  <link rel="stylesheet" href="../../components/ddi/ddi.css" />
+  <link rel="stylesheet" href="../../components/compatibility/compatibility.css" />
+  <link rel="stylesheet" href="../../components/company-note/company-note.css" />
+
   </head>
   <body>
     <div id="navbar"></div>
@@ -48,121 +61,60 @@
     <div class="line"></div>
 
     <div class="menu">
-      <a class="active">Registration</a>
-      <a>API</a>
-      <a>Route of Administration</a>
-      <a>Clinical Instructions(EN)</a>
-      <a>Clinical Instructions(TH)</a>
-      <a>Reference</a>
-      <a>Logistics</a>
-      <a>DDI</a>
-      <a>Compatibility</a>
-      <a>Company Note</a>
+      <a onclick="showMenu('registration')">Registration</a>
+      <a onclick="showMenu('api')">API</a>
+      <a onclick="showMenu('admin-route')">Route of Administration</a>
+      <a onclick="showMenu('instructions-en')">Clinical Instructions(EN)</a>
+      <a onclick="showMenu('instructions-th')">Clinical Instructions(TH)</a>
+      <a onclick="showMenu('reference')">Reference</a>
+      <a onclick="showMenu('logistics')">Logistics</a>
+      <a onclick="showMenu('ddi')">DDI</a>
+      <a onclick="showMenu('compatibility')">Compatibility</a>
+      <a onclick="showMenu('company-note')">Company Note</a>
     </div>
 
-    <div class="registration">
-      
+    <div id="registration" class="route">
+      <?php include '../../components/registration/registration.html'; ?>
     </div>
 
-    <div class="api">
-      
+    <div id="api" class="route">
+      <?php include '../../components/api/api.html'; ?>
+    </div>
+
+    <div id="admin-route" class="route">
+      <?php include '../../components/admin-route/admin-route.html'; ?>
+    </div>
+
+    <div id="instructions-en" class="route">
+      <?php include '../../components/instructions-en/instructions-en.html'; ?>
+    </div>
+
+    <div id="instructions-th" class="route">
+      <?php include '../../components/instructions-th/instructions-th.html'; ?>
+    </div>
+
+    <div id="reference" class="route">
+      <?php include '../../components/reference/reference.html'; ?>
+    </div>
+
+    <div id="logistics" class="route">
+      <?php include '../../components/logistics/logistics.html'; ?>
+    </div>
+
+    <div id="ddi" class="route">
+      <?php include '../../components/ddi/ddi.html'; ?>
+    </div>
+
+    <div id="compatibility" class="route">
+      <?php include '../../components/compatibility/compatibility.html'; ?>
+    </div>
+
+    <div id="company-note" class="route">
+      <?php include '../../components/company-note/company-note.html'; ?>
     </div>
 
     <!-- ---------------------------------------------- -->
-    <div class="detail">
-
-      <p>ข้อมูลทั่วไป</p>
-      <div class="detail-row">
-        
-        <!-- Dosage Form -->
-        <div class="form-group">
-          <label>Dosage Form :</label>
-          <select class="dropdown">
-            <option value="">-- Select Dosage Form --</option>
-            <option>AEROSAL</option>
-            <option>AEROSAL, FOAM</option>
-            <option>AEROSAL, METERED</option>
-            <option>AEROSAL, POWDER</option>
-            <option>AEROSAL, SPRAY</option>
-            <option>BAR, CHEWABLE</option>
-            <option>BEAD</option>
-            <option>BEAD, IMPLANT, EXTENDED RELEASE</option>
-            <option>BLOCK</option>
-            <option>CAPSULE</option>
-            <option>CAPSULE, COATED</option>
-            <option>CAPSULE, COATED PELLETS</option>
-            <option>CAPSULE, COATED, EXTENDED RELEASE</option>
-            <option>CAPSULE, GALATIN COATED</option>
-            <option>CAPSULE, LIQUID FILLED</option>
-            <option>CEMENT</option>
-            <option>CIGARETTE</option>
-            <option>CLOTH</option>
-            <option>CONCENTRATE</option>
-            <option>CONE</option>
-            <option>CONE, EXTENDED RELEASE</option>
-            <option>CREAM</option>
-            <option>CREAM, AUGMENTED</option>
-            <option>CRYSTAL</option>
-            <option>CULTURE</option>
-            <option>DIAPHRAGM</option>
-          </select>
-        </div>
-
-        <!-- Effective Date -->
-        <div class="form-group">
-          <label>Effective Date :</label>
-          <div class="input-box">
-            <input type="date" value="2023-02-23">
-          </div>
-        </div>
-
-        <!-- End Date -->
-        <div class="form-group">
-          <label>End Date :</label>
-          <div class="input-box">
-            <input type="date" value="2030-02-23">
-          </div>
-        </div>
-
-        <!-- Storage -->
-        <div class="form-group">
-          <label>Storage Condition :</label>
-          <select class="dropdown">
-            <option value="">-- Select Dosage Form --</option>
-            <option>Freezed : minus 20 degrees C to minus 40 degrees c</option>
-            <option>Room : below 30 degrees C</option>
-            <option>Refrigerated : 2 degrees C to 8 degrees C</option>
-          </select>
-        </div>
-      </div>
-
-      <p>รูปภาพยา ใส่ได้สูงสุด 3 รูป</p>
-      <div class="button">
-        <button class="upload">Upload</button>
-        <button class="delete">delete</button>
-      </button>
-      </div>
-
-       <div class="img">
     
-        <div class="card">
-          <div class="img-placeholde"></div>
-          <button class="delete">Delete</button>
-        </div>
-
-        <div class="card">
-          <div class="img-placeholde"></div>
-          <button class="delete">Delete</button>
-        </div>
-
-        <div class="card">
-          <div class="img-placeholde"></div>
-          <button class="delete">Delete</button>
-        </div>
-
-      </div>
-
-    </div>
 
     
 
@@ -171,7 +123,7 @@
         function showMenu(menuId) {
 
             // ซ่อนทั้งหมด
-            let contents = document.querySelectorAll('.content');
+            let contents = document.querySelectorAll('.route');
 
             contents.forEach(content => {
                 content.style.display = 'none';
@@ -182,7 +134,7 @@
         }
 
         // เปิดหน้าแรกอัตโนมัติ
-        showMenu('home');
+        showMenu('registration');
 
     </script>
 
