@@ -1,11 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Logistics</h1>
-</body>
-</html>
+<div class="container mt-4">
+    <div class="row g-4">
+
+        <!-- Barcode -->
+        <div class="col-md-6">
+            <div class="card p-4 border-0 shadow-sm bg-white h-100">
+                <h5 class="fw-bold mb-3">
+                    <i class="bi bi-barcode me-2"></i> Barcode
+                </h5>
+                <div class="mb-3">
+                    <label class="form-label small fw-bold">Trade Code</label>
+                    <input type="text" class="form-control form-control-sm" value="34567867453576" style="max-width: 200px;">
+                </div>
+                <div class="p-3 style-blue-zone">
+                    <div class="row mb-2 align-items-center">
+                        <label class="col-sm-5 col-form-label col-form-label-sm fw-bold">Barcode Type :</label>
+                        <div class="col-sm-7">
+                            <select class="form-select form-select-sm"><option>GTIN-13</option></select>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <label class="col-sm-5 col-form-label col-form-label-sm fw-bold">Barcode Marked :</label>
+                        <div class="col-sm-7">
+                            <select class="form-select form-select-sm"><option>YES</option></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conversion / Net Content -->
+        <div class="col-md-6">
+            <div class="card p-4 border-0 shadow-sm bg-white h-100">
+                <div class="row mb-2 align-items-center">
+                    <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">Conversion :</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control form-control-sm text-end" value="2.000">
+                    </div>
+                </div>
+                <div class="row mb-3 align-items-center">
+                    <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">Net Content :</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control form-control-sm text-end" value="12.700">
+                    </div>
+                </div>
+                <div class="p-3 style-blue-zone">
+                    <div class="row mb-2 align-items-center">
+                        <label class="col-sm-5 col-form-label col-form-label-sm fw-bold">UOM :</label>
+                        <div class="col-sm-7">
+                            <select class="form-select form-select-sm"><option>GRAM</option></select>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <label class="col-sm-5 col-form-label col-form-label-sm fw-bold">Orderable Unit :</label>
+                        <div class="col-sm-7">
+                            <select class="form-select form-select-sm"><option>YES</option></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Unit -->
+        <div class="col-md-6">
+            <div class="card p-4 border-0 shadow-sm bg-white h-100">
+                <h5 class="fw-bold mb-3">
+                    <i class="bi bi-box-seam me-2"></i> Unit
+                </h5>
+                <div class="p-3 style-blue-zone">
+                    <div class="row mb-2 align-items-center">
+                        <label class="col-sm-5 col-form-label col-form-label-sm fw-bold">Presentation Unit :</label>
+                        <div class="col-sm-7">
+                            <select class="form-select form-select-sm"><option>SYRINGE</option></select>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <label class="col-sm-5 col-form-label col-form-label-sm fw-bold">Base Unit :</label>
+                        <div class="col-sm-7">
+                            <select class="form-select form-select-sm"><option>YES</option></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dimension -->
+        <div class="col-md-6">
+            <div class="card p-4 border-0 shadow-sm bg-white h-100">
+                <h5 class="fw-bold mb-3">
+                    <i class="bi bi-rulers me-2"></i> Dimension :
+                </h5>
+                <div class="row g-2">
+                    <div class="col-sm-6">
+                        <div class="p-3 style-blue-zone h-100">
+                            <div class="row mb-2 align-items-center">
+                                <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">Width :</label>
+                                <div class="col-sm-8"><input type="text" class="form-control form-control-sm text-end" value="5.500"></div>
+                            </div>
+                            <div class="row mb-2 align-items-center">
+                                <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">Length :</label>
+                                <div class="col-sm-8"><input type="text" class="form-control form-control-sm text-end" value="14.500"></div>
+                            </div>
+                            <div class="row align-items-center">
+                                <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">Height :</label>
+                                <div class="col-sm-8"><input type="text" class="form-control form-control-sm text-end" value="1.900"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="p-3 style-blue-zone h-100">
+                            <div class="row mb-2 align-items-center">
+                                <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">UOM :</label>
+                                <div class="col-sm-8"><select class="form-select form-select-sm"><option>CENTIMETRE</option></select></div>
+                            </div>
+                            <div class="row mb-2 align-items-center">
+                                <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">Weight :</label>
+                                <div class="col-sm-8"><input type="text" class="form-control form-control-sm text-end" value="23.000"></div>
+                            </div>
+                            <div class="row align-items-center">
+                                <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">UOM :</label>
+                                <div class="col-sm-8"><select class="form-select form-select-sm"><option>GRAM</option></select></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
