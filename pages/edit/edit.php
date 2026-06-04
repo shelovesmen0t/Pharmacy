@@ -30,9 +30,9 @@
       <p><span style="font-weight:bold; font-size: 32px; padding-right: 20px;">Drug Edit</span>แก้ไขข้อมูลยา</p>
     </div>
 
-    <div class="box">
-      <div class="topic">
-          <div class="topic-left">
+    <div class="edit-box">
+      <div class="edit-topic">
+          <div class="edit-topic-left">
           <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#4671DE">
             <path d="M560-80v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T903-300L683-80H560Zm300-263-37-37 37 37ZM620-140h38l121-122-18-19-19-18-122 121v38ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v120h-80v-80H520v-200H240v640h240v80H240Zm280-400Zm241 199-19-18 37 37-18-19Z"/>
           </svg>
@@ -44,7 +44,7 @@
         </a>
       </div>
       
-      <div class="content">
+      <div class="edit-content">
         <div class="top">
           <div class="content-left">
             <p>version : 1</p>
@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <div class="under-box">
+    <div class="edit-under-box">
       <a href="" class="refresh">
         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8b931"><path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/></svg>
         <p>Refresh</p>
@@ -82,19 +82,19 @@
       </a>
     </div>
 
-    <div class="line"></div>
+    <div class="edit-line"></div>
 
-    <div class="menu">
-      <a onclick="showMenu('registration')">Registration</a>
-      <a onclick="showMenu('api')">API</a>
-      <a onclick="showMenu('admin-route')">Route of Administration</a>
-      <a onclick="showMenu('instructions-en')">Clinical Instructions(EN)</a>
-      <a onclick="showMenu('instructions-th')">Clinical Instructions(TH)</a>
-      <a onclick="showMenu('reference')">Reference</a>
-      <a onclick="showMenu('logistics')">Logistics</a>
-      <a onclick="showMenu('ddi')">DDI</a>
-      <a onclick="showMenu('compatibility')">Compatibility</a>
-      <a onclick="showMenu('company-note')">Company Note</a>
+    <div class="edit-menu">
+      <a onclick="showMenu('registration')" id="menu-registration">Registration</a>
+      <a onclick="showMenu('api')" id="menu-api">API</a>
+      <a onclick="showMenu('admin-route')" id="menu-admin-route">Route of Administration</a>
+      <a onclick="showMenu('instructions-en')" id="menu-instructions-en">Clinical Instructions(EN)</a>
+      <a onclick="showMenu('instructions-th')" id="menu-instructions-th">Clinical Instructions(TH)</a>
+      <a onclick="showMenu('reference')" id="menu-reference">Reference</a>
+      <a onclick="showMenu('logistics')" id="menu-logistics">Logistics</a>
+      <a onclick="showMenu('ddi')" id="menu-ddi">DDI</a>
+      <a onclick="showMenu('compatibility')" id="menu-compatibility">Compatibility</a>
+      <a onclick="showMenu('company-note')" id="menu-company-note">Company Note</a>
     </div>
 
     <div id="registration" class="route">
@@ -138,27 +138,33 @@
     </div>
 
     <!-- ---------------------------------------------- -->
-    
-
-    
-
     <script>
 
         function showMenu(menuId) {
 
-            // ซ่อนทั้งหมด
             let contents = document.querySelectorAll('.route');
-
             contents.forEach(content => {
                 content.style.display = 'none';
             });
 
-            // แสดงอันที่กด
-            document.getElementById(menuId).style.display = 'block';
+            const targetElement = document.getElementById(menuId);
+            if (targetElement) {
+                targetElement.style.display = 'block';
+            }
+
+            document.querySelectorAll('.edit-menu a').forEach(item => {
+                item.classList.remove('active');
+            });
+            const activeLink = document.getElementById('menu-' + menuId);
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+
+            sessionStorage.setItem('activeMenu', menuId);
         }
 
-        // เปิดหน้าแรกอัตโนมัติ
-        showMenu('registration');
+        const savedMenu = sessionStorage.getItem('activeMenu') || 'registration';
+        showMenu(savedMenu);
 
     </script>
 
