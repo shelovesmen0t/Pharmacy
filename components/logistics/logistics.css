@@ -1,3 +1,26 @@
 #logistics {
-    
+/* api.css */
+
+body {
+    background-color: #c8dff0;
+}
+
+/* Card heading ชิดซ้าย */
+.card h5 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* กล่องสีฟ้าด้านใน */
+.style-blue-zone {
+    background-color: #b8d9f0;
+    border-radius: 8px;
+}
+
+/* input/select บนพื้นฟ้า ให้ขาวชัด */
+.style-blue-zone .form-control,
+.style-blue-zone .form-select {
+    background-color: #fff;
+    border: 1px solid #9dc4e0;
+}
 }
