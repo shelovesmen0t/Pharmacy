@@ -138,6 +138,8 @@
       <?php include '../../components/company-note/company-note.html'; ?>
     </div>
 
+  </div>
+
     <!-- ---------------------------------------------- -->
     <script>
 
