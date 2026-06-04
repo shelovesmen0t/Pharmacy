@@ -3,7 +3,7 @@ body {
   font-family: "Sarabun", sans-serif;
 }
 
-.container {
+#main-content > .container, body > .container {
   width: 85%;
   height: auto;
   margin-left: auto;
@@ -13,7 +13,7 @@ body {
   padding-top: 30px;
 }
 
-.box {
+.edit-box {
   height: auto;
   margin-top: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -21,14 +21,14 @@ body {
   border-radius: 15px;
 }
 
-.topic {
+.edit-topic {
   padding-top: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.topic-left {
+.edit-topic-left {
   margin-left: 20px;
   font-size: 24px;
   padding: 20px;
@@ -42,7 +42,7 @@ body {
   }
 }
 
-.topic a {
+.edit-topic a {
   display: flex;
   border: 1px solid #80cfff;
   border-radius: 10px;
@@ -59,16 +59,17 @@ body {
   p {
     color: #2063b8;
     font-weight: bold;
+    margin: 0;
   }
 }
 
-.topic a:hover {
+.edit-topic a:hover {
   transform: translateY(-5px);
   background-color: #eef3ff;
   color: #ffff;
 }
 
-.content {
+.edit-content {
   font-size: 17px;
   padding-top: 0px;
   padding-bottom: 50px;
@@ -87,16 +88,19 @@ body {
 }
 
 /* ===== LINE ===== */
-.line {
+.edit-line {
   height: 120%;
   height: 3px;
   background-color: #4ba6ef;
   margin-top: 40px;
 }
 
-.under-box{
+.edit-under-box {
   a {
     text-decoration: none;
+    p {
+      margin: 0;
+    }
   }
 
   padding-top: 30px;
@@ -139,12 +143,11 @@ body {
   .save:hover {
     transform: translateY(-5px);
     background-color: #12db70;
-
   }
 }
 
 /* ===== menu ===== */
-.menu {
+.edit-menu {
   justify-items: center;
   margin-top: 40px;
   height: auto;
@@ -158,24 +161,28 @@ body {
   margin-bottom: 40px;
 }
 
-.menu a {
+.edit-menu a {
   margin: 0;
   padding: 12px 10px;
   text-align: center;
   background: #ffff;
   border-radius: 10px;
-  cursor: pointer;
+  cursor: point er;
   width: 200px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  color: black;
+
+  transition: 0.2s;
 }
 
-.menu .active {
+.edit-menu .active {
   background-color: #0f46af;
   color: white;
   font-weight: 500;
 }
 
-.menu :hover {
+.edit-menu a:hover {
   background-color: #0f46af;
   color: white;
   font-weight: 500;
