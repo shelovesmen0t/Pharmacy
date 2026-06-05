@@ -1,172 +1,169 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Compatibility Table</title>
-  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet"/>
-  <style>
-    
+<style>
+  #compatibility {
     .wrapper {
-      background: #fff;
-      border: 2px solid #3b82f6;
-      border-radius: 10px;
-      width: 100%;
-      max-width: 820px;
-      overflow: hidden;
-    }
+    background: #fff;
+    border-radius: 10px;
+    width: 100%;
+  }
 
-    /* Title row */
-    .title-row {
-      padding: 18px 16px 14px;
-      text-align: center;
-      font-size: 15px;
-      color: #222;
-      border-bottom: 2px solid #3b82f6;
-    }
+  /* Title row */
+  .title-row {
+    padding: 18px 16px 14px;
+    text-align: center;
+    font-size: 15px;
+    color: #222;
+    border-bottom: 2px solid #3b82f6;
+  }
 
-    .title-row .add-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 18px;
-      height: 18px;
-      background: #22c55e;
-      color: #fff;
-      border-radius: 50%;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-      vertical-align: middle;
-      margin: 0 2px;
-      line-height: 1;
-    }
+  .title-row .add-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: #22c55e;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 0 2px;
+    line-height: 1;
+  }
 
-    .title-row .del-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 18px;
-      height: 18px;
-      background: #ef4444;
-      color: #fff;
-      border-radius: 3px;
-      font-size: 12px;
-      font-weight: 700;
-      cursor: pointer;
-      vertical-align: middle;
-      margin: 0 2px;
-    }
+  .title-row .del-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: #ef4444;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 0 2px;
+  }
 
-    .title-row span.red { color: #ef4444; }
+  .title-row span.red { color: #ef4444; }
 
-    /* Table */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
+  /* Table */
+#compatTable {
+  padding: 0 20px;
+}
 
-    thead tr {
-      background: #bfdbfe;
-    }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
 
-    thead th {
-      padding: 10px 12px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #1e3a8a;
-      text-align: center;
-      border: 1px solid #93c5fd;
-    }
+  thead tr {
+    background: #bfdbfe;
+  }
 
-    tbody tr {
-      background: #eff6ff;
-    }
+  thead th {
+    padding: 10px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-align: center;
+    border: 1px solid #93c5fd;
+  }
 
-    tbody tr:hover {
-      background: #dbeafe;
-    }
+  tbody tr {
+    background: #eff6ff;
+  }
 
-    tbody td {
-      padding: 12px 14px;
-      font-size: 13px;
-      color: #222;
-      text-align: center;
-      border: 1px solid #bfdbfe;
-      vertical-align: middle;
-    }
+  tbody tr:hover {
+    background: #dbeafe;
+  }
 
-    /* Input row */
-    .input-row td {
-      padding: 10px 12px;
-      background: #eff6ff;
-    }
+  tbody td {
+    padding: 12px 14px;
+    font-size: 13px;
+    color: #222;
+    text-align: center;
+    border: 1px solid #bfdbfe;
+    vertical-align: middle;
+  }
 
-    .input-row input,
-    .input-row select {
-      width: 100%;
-      padding: 6px 10px;
-      border: 1px solid #93c5fd;
-      border-radius: 6px;
-      font-size: 13px;
-      font-family: inherit;
-      background: #fff;
-      color: #222;
-      outline: none;
-    }
+  /* Input row */
+  .input-row td {
+    padding: 10px 12px;
+    background: #eff6ff;
+  }
 
-    .input-row input:focus,
-    .input-row select:focus {
-      border-color: #3b82f6;
-      box-shadow: 0 0 0 2px #bfdbfe;
-    }
+  .input-row input,
+  .input-row select {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #93c5fd;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    background: #fff;
+    color: #222;
+    outline: none;
+  }
 
-    /* Action buttons */
-    .btn-delete {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 26px;
-      height: 26px;
-      background: #ef4444;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: 700;
-      cursor: pointer;
-    }
+  .input-row input:focus,
+  .input-row select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px #bfdbfe;
+  }
 
-    .btn-delete:hover { background: #dc2626; }
+  /* Action buttons */
+  .btn-delete {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
 
-    .btn-add {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      background: #22c55e;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      font-size: 20px;
-      font-weight: 700;
-      cursor: pointer;
-      line-height: 1;
-    }
+  .btn-delete:hover { background: #dc2626; }
 
-    .btn-add:hover { background: #16a34a; }
+  .btn-add {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #22c55e;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 1;
+  }
 
-    /* Footer spacer */
-    .footer-row td {
-      height: 40px;
-      background: #fff;
-      border: none;
-    }
+  .btn-add:hover { background: #16a34a; }
+
+  /* Footer spacer */
+  .footer-row td {
+    height: 40px;
+    background: #fff;
+    border: none;
+  }  
+}
+  
   </style>
 </head>
-<body>
 
+
+<section id="compatibility">
 <div class="wrapper">
 
   <!-- Title -->
@@ -263,5 +260,5 @@
   renderRows();
 </script>
 
-</body>
+</section>
 </html>

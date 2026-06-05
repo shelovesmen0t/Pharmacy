@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DDI Table</title>
 <style>
-
-
-  .container {
+  #ddi {
+    .container {
     background: #ffffff;
     border: 2px solid #3b82c4;
     border-radius: 10px;
     padding: 30px 30px 40px;
     width: 100%;
-    max-width: 860px;
   }
 
   .title {
@@ -175,9 +167,11 @@
   }
 
   .btn-add:hover { background: #178a35; }
+  }
+  
 </style>
-</head>
-<body>
+
+<section id="ddi">
 <div class="container">
   <div class="title">
     DDI (กรุณา Click <span class="icon-add">⊕</span> เพื่อเพิ่มข้อมูล, <span class="icon-del">✖</span> เพื่อลบข้อมูล)
@@ -244,6 +238,8 @@
   </table>
 </div>
 
+</section>
+
 <script>
   function renumberRows() {
     const rows = document.querySelectorAll('#ddiBody tr');
@@ -285,5 +281,3 @@
     document.getElementById('selectInteraction').value = '';
   }
 </script>
-</body>
-</html>

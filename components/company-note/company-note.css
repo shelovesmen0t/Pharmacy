@@ -1,20 +1,6 @@
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: #dce8f5;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 2rem;
-    }
-
+#company-note {
     /* ---------- Card ---------- */
     .msg-card {
       background: #fff;
@@ -181,4 +167,5 @@
       stroke-linecap: round;
       stroke-linejoin: round;
     }
+}
 
