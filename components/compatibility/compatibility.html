@@ -1,1 +1,267 @@
-<h1>Compatibility</h1>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compatibility Table</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    
+    .wrapper {
+      background: #fff;
+      border: 2px solid #3b82f6;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 820px;
+      overflow: hidden;
+    }
+
+    /* Title row */
+    .title-row {
+      padding: 18px 16px 14px;
+      text-align: center;
+      font-size: 15px;
+      color: #222;
+      border-bottom: 2px solid #3b82f6;
+    }
+
+    .title-row .add-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      background: #22c55e;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      vertical-align: middle;
+      margin: 0 2px;
+      line-height: 1;
+    }
+
+    .title-row .del-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 18px;
+      height: 18px;
+      background: #ef4444;
+      color: #fff;
+      border-radius: 3px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      vertical-align: middle;
+      margin: 0 2px;
+    }
+
+    .title-row span.red { color: #ef4444; }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead tr {
+      background: #bfdbfe;
+    }
+
+    thead th {
+      padding: 10px 12px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #1e3a8a;
+      text-align: center;
+      border: 1px solid #93c5fd;
+    }
+
+    tbody tr {
+      background: #eff6ff;
+    }
+
+    tbody tr:hover {
+      background: #dbeafe;
+    }
+
+    tbody td {
+      padding: 12px 14px;
+      font-size: 13px;
+      color: #222;
+      text-align: center;
+      border: 1px solid #bfdbfe;
+      vertical-align: middle;
+    }
+
+    /* Input row */
+    .input-row td {
+      padding: 10px 12px;
+      background: #eff6ff;
+    }
+
+    .input-row input,
+    .input-row select {
+      width: 100%;
+      padding: 6px 10px;
+      border: 1px solid #93c5fd;
+      border-radius: 6px;
+      font-size: 13px;
+      font-family: inherit;
+      background: #fff;
+      color: #222;
+      outline: none;
+    }
+
+    .input-row input:focus,
+    .input-row select:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 2px #bfdbfe;
+    }
+
+    /* Action buttons */
+    .btn-delete {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      background: #ef4444;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .btn-delete:hover { background: #dc2626; }
+
+    .btn-add {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: #22c55e;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: 700;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    .btn-add:hover { background: #16a34a; }
+
+    /* Footer spacer */
+    .footer-row td {
+      height: 40px;
+      background: #fff;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- Title -->
+  <div class="title-row">
+    Compatibility (กรุณา Click<span class="add-icon">+</span> เพื่อเพิ่มข้อมูล,
+    <span class="del-icon">✕</span> <span class="red">เพื่อลบข้อมูล</span>)
+  </div>
+
+  <!-- Table -->
+  <table id="compatTable">
+    <thead>
+      <tr>
+        <th style="width:60px">No.</th>
+        <th style="width:160px">Solutions</th>
+        <th>Description</th>
+        <th style="width:150px">Drug<br/>Interactions</th>
+        <th style="width:80px">Action</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <!-- Rows injected by JS -->
+    </tbody>
+  </table>
+
+</div>
+
+<script>
+  const data = [
+    { solutions: "Other medicinal", description: "Becuase of in the absence of compatibility studies", interactions: "Incompatibility" },
+    { solutions: "Other medicinal", description: "Becuase of in the absence of compatibility studies", interactions: "Incompatibility" },
+  ];
+
+  const tbody = document.getElementById('tableBody');
+
+  function renderRows() {
+    tbody.innerHTML = '';
+
+    data.forEach((row, i) => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${i + 1}</td>
+        <td>${row.solutions}</td>
+        <td>${row.description}</td>
+        <td>${row.interactions}</td>
+        <td>
+          <button class="btn-delete" onclick="deleteRow(${i})">✕</button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+    // Input row
+    const inputTr = document.createElement('tr');
+    inputTr.className = 'input-row';
+    inputTr.innerHTML = `
+      <td></td>
+      <td><input type="text" id="inpSolutions" placeholder="Solutions"/></td>
+      <td><input type="text" id="inpDescription" placeholder="Description"/></td>
+      <td>
+        <select id="inpInteractions">
+          <option value="">-- เลือก --</option>
+          <option value="Incompatibility">Incompatibility</option>
+          <option value="Compatible">Compatible</option>
+          <option value="Unknown">Unknown</option>
+        </select>
+      </td>
+      <td>
+        <button class="btn-add" onclick="addRow()">+</button>
+      </td>
+    `;
+    tbody.appendChild(inputTr);
+
+    // Footer spacer
+    const footerTr = document.createElement('tr');
+    footerTr.className = 'footer-row';
+    footerTr.innerHTML = `<td colspan="5"></td>`;
+    tbody.appendChild(footerTr);
+  }
+
+  function addRow() {
+    const s = document.getElementById('inpSolutions').value.trim();
+    const d = document.getElementById('inpDescription').value.trim();
+    const inter = document.getElementById('inpInteractions').value;
+    if (!s && !d && !inter) return;
+    data.push({ solutions: s, description: d, interactions: inter });
+    renderRows();
+  }
+
+  function deleteRow(index) {
+    data.splice(index, 1);
+    renderRows();
+  }
+
+  renderRows();
+</script>
+
+</body>
+</html>
