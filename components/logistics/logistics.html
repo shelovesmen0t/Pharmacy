@@ -1,130 +1,158 @@
-<div class="container mt-4">
-    <div class="row g-4">
+    <div class="container-fluid py-4" id="logistics-container">
+        <div class="row g-4">
 
-        <!-- Barcode -->
-        <div class="col-md-6">
-            <div class="card p-4 border-0 shadow-sm bg-white h-100">
-                <h5 class="fw-bold mb-3">
-                    <i class="bi bi-barcode me-2"></i> Barcode
-                </h5>
-                <div class="mb-3">
-                    <label class="form-label small fw-bold">Trade Code</label>
-                    <input type="text" class="form-control form-control-sm" value="34567867453576" style="max-width: 200px;">
-                </div>
-                <div class="p-3 style-blue-zone">
-                    <div class="row mb-2 align-items-center">
-                        <label class="col-sm-5 col-form-label col-form-label-sm fw-bold">Barcode Type :</label>
-                        <div class="col-sm-7">
-                            <select class="form-select form-select-sm"><option>GTIN-13</option></select>
-                        </div>
+            <div class="col-md-6">
+                <div class="main-card p-4 h-100">
+                    <h5 class="section-title">
+                        <i class="bi bi-upc-scan"></i>Barcode
+                    </h5>
+                    <div class="mb-3">
+                        <label class="form-label field-label mb-1">Trade Code</label>
+                        <input type="text" class="form-control custom-input text-start shadow-none" value="" style="width: 180px;">
                     </div>
-                    <div class="row align-items-center">
-                        <label class="col-sm-5 col-form-label col-form-label-sm fw-bold">Barcode Marked :</label>
-                        <div class="col-sm-7">
-                            <select class="form-select form-select-sm"><option>YES</option></select>
+                    <div class="blue-zone p-3 d-flex flex-column gap-3" style="margin-top: 1.5rem;">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="field-label">Barcode Type :</span>
+                            <select class="form-select custom-select">
+                                <option value="" selected disabled>-- กรุณาเลือกข้อมูล --</option>ห
+        <option value="GTIN-8">GTIN-8</option>
+        <option value="GTIN-12">GTIN-12</option>
+        <option value="GTIN-13">GTIN-13</option>
+        <option value="GTIN-14">GTIN-14</option>
+        <option value="DataMatrix">DataMatrix</option>
+        <option value="HIBC">HIBC</option>
+    </select>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="field-label">Barcode Marked :</span>
+                            <select class="form-select custom-select">
+                                <option value="" selected disabled>-- กรุณาเลือกข้อมูล --</option>
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
+                            </select>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Conversion / Net Content -->
-        <div class="col-md-6">
-            <div class="card p-4 border-0 shadow-sm bg-white h-100">
-                <div class="row mb-2 align-items-center">
-                    <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">Conversion :</label>
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control form-control-sm text-end" value="2.000">
-                    </div>
-                </div>
-                <div class="row mb-3 align-items-center">
-                    <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">Net Content :</label>
-                    <div class="col-sm-5">
-                        <input type="text" class="form-control form-control-sm text-end" value="12.700">
-                    </div>
-                </div>
-                <div class="p-3 style-blue-zone">
-                    <div class="row mb-2 align-items-center">
-                        <label class="col-sm-5 col-form-label col-form-label-sm fw-bold">UOM :</label>
-                        <div class="col-sm-7">
-                            <select class="form-select form-select-sm"><option>GRAM</option></select>
+            <div class="col-md-6">
+                <div class="main-card p-4 h-100 d-flex flex-column justify-content-between">
+                    <div class="d-flex flex-column gap-3 mb-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="field-label-dark">Conversion :</span>
+                            <input type="text" class="form-control custom-input text-center" value="">
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="field-label-dark">Net Content :</span>
+                            <input type="text" class="form-control custom-input text-center" value="">
                         </div>
                     </div>
-                    <div class="row align-items-center">
-                        <label class="col-sm-5 col-form-label col-form-label-sm fw-bold">Orderable Unit :</label>
-                        <div class="col-sm-7">
-                            <select class="form-select form-select-sm"><option>YES</option></select>
+                    <div class="blue-zone p-3 d-flex flex-column gap-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="field-label">UOM :</span>
+                            <select class="form-select custom-select">
+                                <option value="" selected disabled>-- กรุณาเลือกข้อมูล --</option>
+                                <option value="KILOGRAM">KILOGRAM</option>
+                                <option value="GRAM">GRAM</option>
+                                <option value="TON">TON</option>
+                                <option value="ml">ml</option>
+                                <option value="mg">mg</option>
+                                    </select>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="field-label">Orderable Unit :</span>
+                            <select class="form-select custom-select">
+                            <option value="" selected disabled>-- กรุณาเลือกข้อมูล --</option>
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Unit -->
-        <div class="col-md-6">
-            <div class="card p-4 border-0 shadow-sm bg-white h-100">
-                <h5 class="fw-bold mb-3">
-                    <i class="bi bi-box-seam me-2"></i> Unit
-                </h5>
-                <div class="p-3 style-blue-zone">
-                    <div class="row mb-2 align-items-center">
-                        <label class="col-sm-5 col-form-label col-form-label-sm fw-bold">Presentation Unit :</label>
-                        <div class="col-sm-7">
-                            <select class="form-select form-select-sm"><option>SYRINGE</option></select>
+            <div class="col-md-6">
+                <div class="main-card p-4 h-100">
+                    <h5 class="section-title">
+                        <i class="bi bi-box-seam"></i>Unit
+                    </h5>
+                    <div class="blue-zone p-4 d-flex flex-column gap-4" style="margin-top: 1.5rem;">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="field-label">Presentation Unit :</span>
+                            <select class="form-select custom-select" style="min-width: 180px;">
+                                <option value="" selected disabled>-- กรุณาเลือกข้อมูล --</option>
+                                <option value="STICK">STICK</option>
+                                <option value="SWAB">SWAB</option>
+                                <option value="SYRINGE">SYRINGE</option>
+                                <option value="TABLET">TABLET</option>
+                                <option value="TANK">TANK   </option>
+                            </select>
                         </div>
-                    </div>
-                    <div class="row align-items-center">
-                        <label class="col-sm-5 col-form-label col-form-label-sm fw-bold">Base Unit :</label>
-                        <div class="col-sm-7">
-                            <select class="form-select form-select-sm"><option>YES</option></select>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <span class="field-label">Base Unit :</span>
+                            <select class="form-select custom-select" style="min-width: 180px;">
+                                <option value="" selected disabled>-- กรุณาเลือกข้อมูล --</option>
+                                <option value="YES">YES</option>
+                                <option value="NO">NO</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Dimension -->
-        <div class="col-md-6">
-            <div class="card p-4 border-0 shadow-sm bg-white h-100">
-                <h5 class="fw-bold mb-3">
-                    <i class="bi bi-rulers me-2"></i> Dimension :
-                </h5>
-                <div class="row g-2">
-                    <div class="col-sm-6">
-                        <div class="p-3 style-blue-zone h-100">
-                            <div class="row mb-2 align-items-center">
-                                <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">Width :</label>
-                                <div class="col-sm-8"><input type="text" class="form-control form-control-sm text-end" value="5.500"></div>
-                            </div>
-                            <div class="row mb-2 align-items-center">
-                                <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">Length :</label>
-                                <div class="col-sm-8"><input type="text" class="form-control form-control-sm text-end" value="14.500"></div>
-                            </div>
-                            <div class="row align-items-center">
-                                <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">Height :</label>
-                                <div class="col-sm-8"><input type="text" class="form-control form-control-sm text-end" value="1.900"></div>
+            <div class="col-md-6">
+                <div class="main-card p-4 h-100">
+                    <h5 class="section-title">
+                        <i class="bi bi-bounding-box-circles"></i>Dimension :
+                    </h5>
+                    <div class="row g-3" style="margin-top: 1.5rem;">
+                        <div class="col-sm-6">
+                            <div class="blue-zone p-3 d-flex flex-column gap-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="field-label text-nowrap">Width :</span>
+                                    <input type="text" class="form-control custom-input text-center" value="">
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="field-label text-nowrap">Length :</span>
+                                    <input type="text" class="form-control custom-input text-center" value="">
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="field-label text-nowrap">Height :</span>
+                                    <input type="text" class="form-control custom-input text-center" value="">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="p-3 style-blue-zone h-100">
-                            <div class="row mb-2 align-items-center">
-                                <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">UOM :</label>
-                                <div class="col-sm-8"><select class="form-select form-select-sm"><option>CENTIMETRE</option></select></div>
-                            </div>
-                            <div class="row mb-2 align-items-center">
-                                <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">Weight :</label>
-                                <div class="col-sm-8"><input type="text" class="form-control form-control-sm text-end" value="23.000"></div>
-                            </div>
-                            <div class="row align-items-center">
-                                <label class="col-sm-4 col-form-label col-form-label-sm fw-bold">UOM :</label>
-                                <div class="col-sm-8"><select class="form-select form-select-sm"><option>GRAM</option></select></div>
+                        <div class="col-sm-6">
+                            <div class="blue-zone p-3 d-flex flex-column gap-3">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="field-label text-nowrap">UOM :</span>
+                                    <select class="form-select custom-select">
+                                        <option value="" selected disabled>-- กรุณาเลือกข้อมูล --</option>
+                                <option value="CENTMETRE">CENTMETRE</option>
+                                <option value="MRTRE">MRTRE</option>
+                                    </select>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="field-label text-nowrap">Weight :</span>
+                                    <input type="text" class="form-control custom-input text-center" value="">
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <span class="field-label text-nowrap">UOM :</span>
+                                    <select class="form-select custom-select">
+                                        <option value="" selected disabled>-- กรุณาเลือกข้อมูล --</option>
+                                <option value="KILOGRAM">KILOGRAM</option>
+                                <option value="GRAM">GRAM</option>
+                                <option value="TON">TON</option>
+                                <option value="ml">ml</option>
+                                <option value="mg">mg</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
-</div>

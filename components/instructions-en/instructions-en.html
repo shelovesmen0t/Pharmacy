@@ -1,25 +1,34 @@
-
-    <div class="container">
-
-        <div class="header">
-            <div class="title">
-                <!-- logo -->
-                <p>Clinical Instructions(EN)</p>
-            </div>
-            <div class="drop-down">
-                <select name="">
-                    <option hidden selected>-- กรุณาเลือกข้อมูล --</option>
-                    <option value="">Indications</option>
-                    <option value="">Dosage</option>
-                    <option value="">Drug Adminstration</option>
-                    <option value="">Recommendation</option>
-                    <option value="">Warning And Precautions</option>
-                    <option value="">Special Precautions</option>
-                </select>
-            </div>
-        </div>
-        <div class="content">
-            <input type="text">
-        </div>
-
+<div id="instructions-en" class="p-3 bg-white rounded">
+    
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <!-- Title -->
+        <div class="d-flex align-items-center gap-2">
+    <div class="d-flex align-items-center justify-content-center rounded text-white"
+        style="width:32px; height:32px; background-color:#1a56db;">
+        <i class="bi bi-file-earmark-text-fill"></i>
     </div>
+    <span class="fw-medium" style="color:#1a56db;">Clinical Instructions(EN)</span>
+</div>
+
+        <!-- Dropdown -->
+        <select class="form-select rounded-pill text-secondary" style="width:220px;">
+            <option hidden selected>-- กรุณาเลือกข้อมูล --</option>
+            <option>Indications</option>
+            <option>Dosage</option>
+            <option>Drug Administration</option>
+            <option>Recommendation</option>
+            <option>Contraindication</option>
+            <option>Warning And Precautions</option>
+            <option>Special Precautions</option>
+            <option>Pregnancy and Lactation</option>
+            <option>Adverse Reactions</option>
+            <option>Overdose</option>
+            <option>Drug Stability</option>
+        </select>
+    </div>
+
+    <!-- Textarea -->
+    <textarea class="form-control" rows="6" 
+        placeholder="ยังไม่มีข้อมูล..."></textarea>
+
+</div>
