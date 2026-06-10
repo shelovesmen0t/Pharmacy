@@ -1,1 +1,260 @@
-<h1>Company Note</h1>
+  <style>
+    #company-note {
+      .card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        width: 100%;
+        padding: 28px 32px 32px;
+      }
+
+      /* Top Bar */
+      .top-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 14px;
+      }
+
+      .btn-read {
+        background: #22c55e;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 9px 18px;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: inherit;
+      }
+
+      .btn-show {
+        background: #1e3a8a;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 9px 22px;
+        font-weight: 700;
+        font-size: 14px;
+        cursor: pointer;
+        letter-spacing: 0.03em;
+        font-family: inherit;
+      }
+
+      .btn-read:hover { background: #16a34a; }
+      .btn-show:hover { background: #1e40af; }
+
+      /* Divider */
+      .divider {
+        border: none;
+        border-top: 2px solid #3b82f6;
+        margin-bottom: 20px;
+      }
+
+      /* Title */
+      .section-title {
+        font-size: 22px;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 16px;
+      }
+
+      /* Message Card */
+      .message-card {
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      /* Message Header */
+      .msg-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px 10px;
+        border-bottom: 1px solid #f1f5f9;
+      }
+
+      .msg-sender {
+        font-weight: 600;
+        font-size: 14px;
+        color: #222;
+      }
+
+      .msg-time {
+        font-size: 13px;
+        color: #888;
+      }
+
+      /* Message Body */
+      .msg-body {
+        padding: 16px;
+        min-height: 180px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .msg-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .msg-row.self {
+        flex-direction: row-reverse;
+      }
+
+      .avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: 2px solid #cbd5e1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: #94a3b8;
+        font-size: 18px;
+        background: #f8fafc;
+      }
+
+      .bubble {
+        background: #1e3a8a;
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 999px;
+        font-size: 14px;
+        font-weight: 500;
+        max-width: 75%;
+        line-height: 1.6;
+      }
+
+      .bubble.self {
+        background: #3b82f6;
+      }
+
+      /* Input Bar */
+      .input-bar {
+        background: #1e3a8a;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+      }
+
+      .input-wrap {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-radius: 999px;
+        padding: 8px 14px;
+        gap: 8px;
+      }
+
+      .input-wrap input {
+        flex: 1;
+        border: none;
+        outline: none;
+        font-size: 14px;
+        background: transparent;
+        color: #222;
+        font-family: inherit;
+      }
+
+      .input-wrap input::placeholder {
+        color: #aaa;
+      }
+
+      .send-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #1e3a8a;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        transition: transform 0.15s;
+      }
+
+      .send-btn:hover { transform: scale(1.2); }
+    }
+  </style>
+
+<section id="company-note">
+
+<div class="card">
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <button class="btn-read">🔔 อ่านข้อความแล้ว</button>
+    <button class="btn-show">Show Message</button>
+  </div>
+
+  <!-- Divider -->
+  <hr class="divider"/>
+
+  <!-- Title -->
+  <h2 class="section-title">Messages</h2>
+
+  <!-- Message Card -->
+  <div class="message-card">
+
+    <!-- Message Header -->
+    <div class="msg-header">
+      <span class="msg-sender">ธีนารา ดีเอบี - บริษัท เอบี</span>
+      <span class="msg-time">2026-01-01 16:20</span>
+    </div>
+
+    <!-- Message Body -->
+    <div class="msg-body" id="msgBody">
+      <div class="msg-row">
+        <div class="avatar">👤</div>
+        <div class="bubble">หากต้องการข้อมูลเพิ่มเติมเกี่ยวกับผลิตภัณฑ์ โปรดติดต่อ</div>
+      </div>
+    </div>
+
+    <!-- Input Bar -->
+    <div class="input-bar">
+      <div class="input-wrap">
+        <input type="text" id="msgInput" placeholder="Aa" />
+        <button class="send-btn" id="sendBtn">&#10148;</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const input = document.getElementById('msgInput');
+  const sendBtn = document.getElementById('sendBtn');
+  const msgBody = document.getElementById('msgBody');
+
+  function sendMessage() {
+    const text = input.value.trim();
+    if (!text) return;
+
+    const row = document.createElement('div');
+    row.className = 'msg-row self';
+
+    const bubble = document.createElement('div');
+    bubble.className = 'bubble self';
+    bubble.textContent = text;
+
+    row.appendChild(bubble);
+    msgBody.appendChild(row);
+    msgBody.scrollTop = msgBody.scrollHeight;
+
+    input.value = '';
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') sendMessage();
+  });
+</script>
+</section>

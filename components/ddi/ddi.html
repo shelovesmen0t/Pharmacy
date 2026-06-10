@@ -1,1 +1,283 @@
-<h1>DDI</h1>
+<style>
+  #ddi {
+    .container {
+    background: #ffffff;
+    border: 2px solid #3b82c4;
+    border-radius: 10px;
+    padding: 30px 30px 40px;
+    width: 100%;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 24px;
+  }
+
+  .title .icon-add {
+    color: #22aa44;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  .title .icon-del {
+    color: #cc2222;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  thead tr {
+    background: #2e6da4;
+    color: #fff;
+  }
+
+  thead th {
+    padding: 12px 14px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  tbody tr {
+    border-bottom: 1px solid #d0dce8;
+  }
+
+  tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  tbody td {
+    padding: 12px 14px;
+    vertical-align: middle;
+    color: #333;
+  }
+
+  td.num, th.num {
+    width: 60px;
+    text-align: center;
+  }
+
+  td.name, th.name {
+    width: 160px;
+    text-align: center;
+  }
+
+  td.desc, th.desc {
+    text-align: left;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  td.interaction, th.interaction {
+    width: 160px;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+  }
+
+  td.action, th.action {
+    width: 80px;
+    text-align: center;
+  }
+
+  /* Input row */
+  .input-row td {
+    background: #f5f9ff;
+    padding: 10px 14px;
+  }
+
+  .select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    padding: 7px 30px 7px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .select-wrapper::after {
+    content: '▼';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #666;
+    pointer-events: none;
+  }
+
+  .input-desc {
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #333;
+    outline: none;
+  }
+
+  .btn-delete {
+    background: #cc2222;
+    border: none;
+    border-radius: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 14px;
+    transition: background 0.15s;
+  }
+
+  .btn-delete:hover { background: #a81a1a; }
+
+  .btn-add {
+    background: #22aa44;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    transition: background 0.15s;
+  }
+
+  .btn-add:hover { background: #178a35; }
+  }
+  
+</style>
+
+<section id="ddi">
+<div class="container">
+  <div class="title">
+    DDI (กรุณา Click <span class="icon-add">⊕</span> เพื่อเพิ่มข้อมูล, <span class="icon-del">✖</span> เพื่อลบข้อมูล)
+  </div>
+
+  <table id="ddiTable">
+    <thead>
+      <tr>
+        <th class="num">No.</th>
+        <th class="name">Generic Name</th>
+        <th class="desc">Description</th>
+        <th class="interaction">Drug Interactions</th>
+        <th class="action">Action</th>
+      </tr>
+    </thead>
+    <tbody id="ddiBody">
+      <tr>
+        <td class="num">1</td>
+        <td class="name">Warfarin</td>
+        <td class="desc">: increase the pharmacological effect of bemiparin by interfering with its action on coagulation and/or platelet function and increasing the risk of bleeding</td>
+        <td class="interaction">Major</td>
+        <td class="action"><button class="btn-delete" onclick="deleteRow(this)">✖</button></td>
+      </tr>
+      <tr>
+        <td class="num">2</td>
+        <td class="name">Warfarin</td>
+        <td class="desc">: increase the pharmacological effect of bemiparin by interfering with its action on coagulation and/or platelet function and increasing the risk of bleeding</td>
+        <td class="interaction">Major</td>
+        <td class="action"><button class="btn-delete" onclick="deleteRow(this)">✖</button></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="input-row" id="inputRow">
+        <td class="num"></td>
+        <td class="name">
+          <div class="select-wrapper">
+            <select id="selectName">
+              <option value=""></option>
+              <option value="Warfarin">Warfarin</option>
+              <option value="Aspirin">Aspirin</option>
+              <option value="Heparin">Heparin</option>
+              <option value="Clopidogrel">Clopidogrel</option>
+            </select>
+          </div>
+        </td>
+        <td class="desc">
+          <input type="text" class="input-desc" id="inputDesc" placeholder="">
+        </td>
+        <td class="interaction">
+          <div class="select-wrapper">
+            <select id="selectInteraction">
+              <option value=""></option>
+              <option value="Major">Major</option>
+              <option value="Moderate">Moderate</option>
+              <option value="Minor">Minor</option>
+            </select>
+          </div>
+        </td>
+        <td class="action">
+          <button class="btn-add" onclick="addRow()">+</button>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>
+
+</section>
+
+<script>
+  function renumberRows() {
+    const rows = document.querySelectorAll('#ddiBody tr');
+    rows.forEach((row, i) => {
+      row.querySelector('.num').textContent = i + 1;
+    });
+  }
+
+  function deleteRow(btn) {
+    btn.closest('tr').remove();
+    renumberRows();
+  }
+
+  function addRow() {
+    const name = document.getElementById('selectName').value.trim();
+    const desc = document.getElementById('inputDesc').value.trim();
+    const interaction = document.getElementById('selectInteraction').value.trim();
+
+    if (!name || !interaction) {
+      alert('กรุณาเลือก Generic Name และ Drug Interactions');
+      return;
+    }
+
+    const tbody = document.getElementById('ddiBody');
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+      <td class="num"></td>
+      <td class="name">${name}</td>
+      <td class="desc">${desc}</td>
+      <td class="interaction">${interaction}</td>
+      <td class="action"><button class="btn-delete" onclick="deleteRow(this)">✖</button></td>
+    `;
+    tbody.appendChild(newRow);
+    renumberRows();
+
+    // Clear inputs
+    document.getElementById('selectName').value = '';
+    document.getElementById('inputDesc').value = '';
+    document.getElementById('selectInteraction').value = '';
+  }
+</script>

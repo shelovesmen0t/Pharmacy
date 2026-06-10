@@ -1,26 +1,70 @@
-#logistics {
-/* api.css */
-
-body {
-    background-color: #c8dff0;
+/* คลุมพื้นที่สไตล์ทั้งหมด */
+#logistics-container {
+    background-color: #e3f2fd; 
+    font-family: system-ui, -apple-system, sans-serif;
 }
 
-/* Card heading ชิดซ้าย */
-.card h5 {
+/* การ์ดหลักสีขาวโค้งมนสวยงาม */
+#logistics-container .main-card {
+    background-color: #ffffff;
+    border-radius: 20px; /* เอา !important ออกแล้ว */
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* หัวข้อประจำการ์ด ชิดซ้ายเด่นชัด */
+#logistics-container .section-title {
     font-size: 1rem;
     font-weight: 700;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 
-/* กล่องสีฟ้าด้านใน */
-.style-blue-zone {
-    background-color: #b8d9f0;
-    border-radius: 8px;
+/* กล่องโซนสีฟ้าด้านใน - ขยายเต็มพื้นที่ */
+#logistics-container .blue-zone {
+    background-color: #bce0fd; 
+    border-radius: 10px;
+    width: 100%;
 }
 
-/* input/select บนพื้นฟ้า ให้ขาวชัด */
-.style-blue-zone .form-control,
-.style-blue-zone .form-select {
-    background-color: #fff;
-    border: 1px solid #9dc4e0;
+/* สไตล์ตัวอักษรของ Label */
+#logistics-container .field-label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #000000;
 }
+
+#logistics-container .field-label-dark {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #000000;
 }
+
+/* ปรับแต่ง Input กล่องข้อความ */
+#logistics-container .custom-input {
+    background-color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 6px;
+    height: 34px;
+    font-size: 0.9rem;
+    color: #333333;
+    max-width: 155px; 
+    padding: 0 8px;
+}
+
+/* ปรับแต่ง Select ดรอปดาวน์ */
+#logistics-container .custom-select {
+    background-color: #ffffff;
+    border: 1px solid #555555;
+    border-radius: 6px;
+    height: 34px;
+    font-size: 0.9rem;
+    color: #333333;
+    max-width: 155px;
+    padding: 0 24px 0 8px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-position: right 8px center;
+    background-size: 12px 12px;
+}   
